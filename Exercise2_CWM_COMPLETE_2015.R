@@ -1,3 +1,5 @@
+#### TEST ####
+
 ###################################################################################################
 #__________________________________R for Community Ecology BI2034__________________________________
 #_______Exercise 2 - Statistical methods in community ecology: Community weighted traits__________
@@ -77,6 +79,8 @@ head(traits_full)
 unique(traits_full$community)
 # Check whether we have 3 unique growth forms
 unique(traits_full$GF)
+
+#### TEST ####
 
 #There is one mistake. DS is called booth "DS" and "dS". 
 #Therefore We first have to identify where the problem is, then we can change it afterwards. 
@@ -165,7 +169,7 @@ linenames
 
 # Rename the columns so we dont have full species names, but three first letters of 
 # genus and species name: 
-# First create species list and then make short names with Øysteins 
+# First create species list and then make short names with ?ysteins 
 # homemade special equation, and change columnnames of the linedat:
 # Go and fine the line in the COMPLETE file, and copy it in here. 
 splist = sub("\\."," ", colnames(linedat)) #List species in community
@@ -198,7 +202,7 @@ trait.mean.per.species
 # Go and find the line in the COMPLETE file, and copy it in here. 
 splist1 = sub("\\."," ", rownames(trait.mean.per.species)) #List species in community
 splist1
-#Then use Øysteins home made line to get same naming as for the biomass data:
+#Then use ?ysteins home made line to get same naming as for the biomass data:
 newnames1 = paste(substr(make.cepnames(splist1),1,3), substr(make.cepnames(splist1),5,7), sep="_")
 newnames1
 #then assign the newnames to the rownames:
